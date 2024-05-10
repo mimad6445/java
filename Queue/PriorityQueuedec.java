@@ -1,10 +1,11 @@
 package Queue;
+import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class priorityQueue {
+public class PriorityQueuedec {
     public static void main(String[] args) {
         // Création d'une file de priorité (PriorityQueue) de chaînes de caractères
-        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Collections.reverseOrder());
 
         // Ajout d'éléments à la file de priorité
         priorityQueue.offer(5);
@@ -19,6 +20,7 @@ public class priorityQueue {
         // Retrait de l'élément en tête de la file de priorité
         int firstElement = priorityQueue.poll();
         System.out.println("Élément retiré de la file de priorité : " + firstElement);
+        System.out.println("Élément retiré de la file de priorité : " + priorityQueue.poll());
         // Affichage de la file de priorité après retrait
         System.out.println("File de priorité après retrait : " + priorityQueue);
 
